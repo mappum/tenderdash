@@ -8,6 +8,7 @@ const hyperx = require('hyperx')
 const assign = require('object-assign')
 const Tendermint = require('tendermint')
 const Status = require('./components/status.js')
+const Blockchain = require('./components/blockchain.js')
 
 class App extends EventEmitter {
   constructor (el) {
@@ -33,6 +34,11 @@ class App extends EventEmitter {
     this.pollInterval = setInterval(() => {
       this.tendermint.status((err, [ _, status ]) => {
         this.updateState({ err, status })
+
+        let height = status.latest_block_height
+        this.tendermint.blockchain(height - 10, height, (err, [ _, blockchain ]) => {
+          this.updateState({ err, blockchain })
+        })
       })
     }, 1000)
   }
@@ -48,6 +54,7 @@ class App extends EventEmitter {
         </header>
         <div class="mdl-layout__content">
           <div class="mdl-grid">
+            ${Blockchain(state.blockchain)}
             ${Status(state.status)}
           </div>
         </div>

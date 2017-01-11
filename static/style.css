@@ -12,17 +12,18 @@ body {
   color: #333;
 }
 
-.status {
+.tenderdash-card {
   padding: 24px;
   padding-top: 0;
 }
-.status ul {
+
+ul.fields {
   padding: 0;
 }
-.status ul > li {
+ul.fields > li {
   list-style: none;
 }
-.status ul > li > label {
+ul.fields > li > label {
   text-transform: uppercase;
   font-size: 0.8em;
   font-weight: bold;
@@ -135,4 +136,6 @@ code {
   margin-bottom: 5px;
   display: block;
   font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
