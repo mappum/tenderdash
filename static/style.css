@@ -1,0 +1,138 @@
+body {
+  background-color: #eeecec;
+}
+
+.tenderdash .mdl-layout__drawer-button {
+  position: static;
+}
+
+.tenderdash .mdl-layout__header,
+.tenderdash .mdl-layout__drawer-button,
+.tenderdash .mdl-layout__header-row .mdl-navigation__link {
+  color: #333;
+}
+
+.status {
+  padding: 24px;
+  padding-top: 0;
+}
+.status ul {
+  padding: 0;
+}
+.status ul > li {
+  list-style: none;
+}
+.status ul > li > label {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  display: block;
+  margin-top: 14px;
+  line-height: 10px;
+  color: #666;
+}
+
+.side-card {
+  min-height: 170px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+@media (max-width: 839px) {
+  .mdl-grid .mdl-grid {
+    width: 100%;
+  }
+  .deployment-card.started {
+    height: 402px;
+  }
+  .deployment-card > .mdl-card__supporting-text .stat:not(:first-child) {
+    margin-left: 0;
+    border-left: none;
+    padding-left: 0;
+    margin-top: 10px;
+    display: block;
+  }
+  .deployment-card > .mdl-card__supporting-text .stat label {
+    display: inline-block;
+    width: 120px;
+  }
+  .deployment-card > .mdl-card__supporting-text .stat > .value {
+    font-size: 18px;
+    display: inline;
+  }
+  .deployment-card > .mdl-card__supporting-text .stat > .unit {
+    font-size: 12px;
+    display: inline;
+  }
+}
+.side-card > .mdl-card__supporting-text > h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+.side-card .mdl-list {
+  margin-top: 0;
+}
+
+.blockchain-card .height {
+  margin: 10px 0;
+  display: block;
+}
+.blockchain-card code.hash {
+  line-height: 16px;
+  background-color: #f5f5f5;
+  border: 1px solid #f0f0f0;
+  padding: 2px;
+  display: block;
+  border-radius: 1px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.blockchain-card .uptodate {
+  color: rgb(76, 175, 80);
+}
+.blockchain-card .uptodate i {
+  vertical-align: middle;
+}
+
+.ct-series-a .ct-line {
+  stroke: white;
+  stroke-width: 3px;
+}
+.ct-targetline {
+  stroke-width: 2px;
+  stroke-dasharray: 7px;
+  stroke: rgba(255,255,255,0.75);
+}
+.ct-targetline-label {
+  fill: rgba(255,255,255,0.66);
+  font-family: "Helvetica","Arial",sans-serif;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 500;
+}
+.ct-series-a .ct-area {
+  fill: rgba(255,255,255,0.4);
+  fill-opacity: 1;
+}
+
+.mdl-grid .mdl-grid {
+  margin: 0;
+}
+.mdl-grid .mdl-grid .mdl-cell:first-child {
+  margin-top: 0;
+}
+
+code {
+  font: monospace;
+  background: #f8f8f8;
+  padding: 0px 6px;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  position: relative;
+  top: 4px;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 12px;
+}
